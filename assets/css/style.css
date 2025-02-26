@@ -50,6 +50,20 @@ grid
     width: 25%;
 }
 
+
+@media screen and (max-width:768px) {
+    .grid {
+        display: block;
+    }
+
+    .grid-col-2>.grid-item,
+    .grid-col-3>.grid-item,
+    .grid-col-4>.grid-item {
+        width: 100%;
+        margin: 20px 0px;
+    }
+}
+
 /*
 section
 */
@@ -76,7 +90,47 @@ section
 /*
 header
 */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
 
+.header-logo {
+    margin: 20px;
+}
+
+.header-logo>a {
+    display: block;
+    color: transparent;
+}
+
+.header-navlist {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navitem>a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color .25s;
+}
+
+.header-navitem>a:hover {
+    border-bottom: 2px solid #333;
+}
 
 /*
 hero
@@ -110,11 +164,17 @@ hero
     object-fit: cover;
 }
 
-.hero-particles{
+.hero-particles {
     position: absolute;
     z-index: 2;
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .hero>strong {
+        font-size: 50px;
+    }
 }
 
 /*
@@ -132,6 +192,22 @@ about
 .about-headline {
     margin: 0 0 20px;
     font-size: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .about {
+        display: block;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-headline {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 /*
@@ -278,6 +354,16 @@ button
     min-height: 100px;
 }
 
+@media screen and (max-width:768px) {
+
+    .select,
+    .input,
+    .textarea {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
 /*
 form
 */
@@ -299,6 +385,17 @@ form
     margin: 20px;
 }
 
+@media screen and (max-width:768px) {
+
+    .form-table,
+    .form-table body,
+    .form-table td,
+    .form-table th,
+    .form-table td {
+        display: block;
+    }
+}
+
 /*
 works
 */
@@ -310,6 +407,18 @@ works
 
 .works img {
     margin: 0 15px;
+}
+
+@media screen and (max-width:768px){
+    .works{
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .works img{
+        width: 100px;
+        margin: 5px;
+    }
 }
 
 /*
