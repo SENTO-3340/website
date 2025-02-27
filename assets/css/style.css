@@ -51,8 +51,7 @@ grid
 }
 
 .grid-col-3{
-    animation: carousel 10s infinite linear;
-    white-space: nowrap;
+    animation: carousel 50s infinite linear;
 }
 
 @keyframes carousel{
