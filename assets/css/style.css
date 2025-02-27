@@ -7,7 +7,8 @@ body {
     font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: #333;
+    background-color: #111;
+    color: #fff;
     overflow-x: hidden;
 }
 
@@ -71,7 +72,9 @@ section
 }
 
 .section.section-secondary {
-    background-color: #efefef;
+    background-color: #333;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .section-headline {
@@ -81,17 +84,10 @@ section
     margin: 0 0 40px;
 }
 
-.section-button {
-    margin: 10px 0 40px;
-    text-align: center;
-}
-
 @media screen and (max-width:768px) {
     .section {
         padding: 20px 10px;
     }
-
-    .section.section-secondary {}
 
     .section-headline {
         font-size: 30px;
@@ -137,15 +133,17 @@ header
 .header-navitem>a {
     display: block;
     padding: 10px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 2px solid transparent;
+    margin-bottom: 2px;
+    border-bottom: 0px solid transparent;
     transition: border-color .25s;
 }
 
 .header-navitem>a:hover {
-    border-bottom: 2px solid #333;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #fff;
 }
 
 @media screen and (max-width:768px) {
@@ -263,14 +261,14 @@ card
 
 .card-link {
     display: block;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     position: relative;
     transition: background-color .25s;
 }
 
 .card-link:hover {
-    background-color: #eee;
+    background-color: #222;
 }
 
 .card-label {
@@ -326,25 +324,85 @@ avator
 /*
 button
 */
+.button-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
 .button {
+    position: relative;
+    z-index: 2;
+    width: 195px;
+    height: 45px;
     display: inline-block;
     color: #fff;
     font-weight: bold;
-    background-color: #333;
+    background-color: #222;
     text-align: center;
-    padding: 15px 60px;
+    padding: 15px 0;
     text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0 #bbb;
-    transition: box-shadow .25s;
+    border-radius: 3px;
 }
 
-.button:hover {
-    box-shadow: 0px 0px 0 #bbb;
+.button-border::before {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg,
+            hsla(197, 100%, 64%, 1) 0%,
+            hsla(339, 100%, 55%, 1) 100%);
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: 1;
+}
+.button-shadow{
+    position: relative;
+    width: min-content;
+    margin: 0 auto;
+}
+
+.button-shadow::after {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg,
+            hsla(197, 100%, 64%, 1) 0%,
+            hsla(339, 100%, 55%, 1) 100%);
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,40%);
+    z-index: 0;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.button-shadow:hover::after {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .button.button-submission {
-    background: #92d3ca;
+    background: #444;
 }
 
 /*
@@ -402,9 +460,14 @@ form
     padding: 19px;
 }
 
-.form-button {
-    text-align: center;
-    margin: 20px;
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -435,14 +498,16 @@ works
     height: auto;
 }
 
-@keyframes infinite-carousel{
-    0%{
+@keyframes infinite-carousel {
+    0% {
         transform: translateX(0);
     }
-    50%{
+
+    50% {
         transform: translateX(-50%);
     }
-    100%{
+
+    100% {
         transform: translateX(-100%);
     }
 }
