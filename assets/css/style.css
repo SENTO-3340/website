@@ -16,12 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-@media screen and (max-width:768px) {
-    body {
-        overflow-x: hidden;
-    }
-}
-
 label,
 input,
 textarea,
@@ -539,6 +533,7 @@ works
     .works {
         margin: 20px 0;
         padding: 10px;
+        overflow-x: hidden;
         animation: infinite-carousel 40s infinite linear;
     }
 
