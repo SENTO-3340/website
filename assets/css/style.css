@@ -341,43 +341,43 @@ avator
 button
 */
 .button-border {
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
     width: 200px;
     height: 50px;
-    margin: 10px auto;
     border-radius: 3px;
-    overflow: hidden;
+    margin: 10px auto;
 }
 
 .button {
+    display: inline-block;
+    text-align: center;
     position: relative;
     z-index: 2;
-    width: 192px;
-    height: 42px;
-    display: inline-block;
+    background-color: #222;
     color: #fff;
     font-weight: bold;
-    background-color: #222;
-    text-align: center;
-    padding: 15px 0;
     text-decoration: none;
+    width: 192px;
+    height: 42px;
     border-radius: 3px;
+    padding: auto 0;
 }
 
 .button-border::before {
     content: "";
     display: block;
+    position: absolute;
+    z-index: 1;
     background: linear-gradient(90deg,
             hsla(197, 100%, 64%, 1) 0%,
             hsla(339, 100%, 55%, 1) 100%);
     height: 500px;
     width: 500px;
-    position: absolute;
     animation: rotate 8s linear infinite;
-    z-index: 1;
 }
 
 .button-shadow {
@@ -395,10 +395,10 @@ button
     width: 200px;
     height: 50px;
     position: absolute;
+    z-index: 0;
     top: -50%;
     left: 50%;
     transform: translate(-50%, 40%);
-    z-index: 0;
     filter: blur(15px);
     opacity: 0;
     transition: opacity 0.25s;
@@ -533,7 +533,7 @@ works
     .works {
         margin: 20px 0;
         padding: 10px;
-        overflow-x: hidden;
+        white-space: wrap;
         animation: infinite-carousel 40s infinite linear;
     }
 
