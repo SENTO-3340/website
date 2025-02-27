@@ -79,6 +79,7 @@ section
     background-color: #333;
     width: 80vw;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .section-headline {
@@ -209,6 +210,13 @@ about
     display: flex;
 }
 
+.about-image {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .about-caption {
     padding-left: 15px;
 }
@@ -289,6 +297,8 @@ card
 .card-image {
     width: 100%;
     height: auto;
+    max-height: 250px;
+    object-fit: cover;
 }
 
 .card-info {
@@ -323,6 +333,12 @@ avator
     margin: 0;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.avator-image>img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
 /*
@@ -498,8 +514,8 @@ works
 }
 
 .works img {
-    margin: 0 15px;
-    width: 200px;
+    margin: 0 60px;
+    width: 80px;
     height: auto;
 }
 
@@ -525,8 +541,8 @@ works
     }
 
     .works img {
-        margin: 0 15px;
-        width: 150px;
+        margin: 0 30px;
+        width: 80px;
         height: auto;
     }
 }
