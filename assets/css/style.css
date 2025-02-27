@@ -44,10 +44,20 @@ grid
 
 .grid-col-3>.grid-item {
     width: 33.3%;
+    animation: carousel 10s infinite linear;
 }
 
 .grid-col-4>.grid-item {
     width: 25%;
+}
+
+@keyframes carousel{
+    form{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
 
 
