@@ -82,7 +82,7 @@ section
 }
 
 .section-button {
-    margin: 0 0 40px;
+    margin: 10px 0 40px;
     text-align: center;
 }
 
@@ -410,8 +410,8 @@ form
 @media screen and (max-width:768px) {
 
     .form-table,
-    .form-table body,
-    .form-table td,
+    .form-table tbody,
+    .form-table tr,
     .form-table th,
     .form-table td {
         display: block;
@@ -425,21 +425,39 @@ works
     margin: 40px 0;
     padding: 20px;
     text-align: center;
+    white-space: nowrap;
+    animation: infinite-carousel 80s infinite linear;
 }
 
 .works img {
     margin: 0 15px;
+    width: 200px;
+    height: auto;
+}
+
+@keyframes infinite-carousel{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 
 @media screen and (max-width:768px) {
     .works {
         margin: 20px 0;
         padding: 10px;
+        animation: infinite-carousel 40s infinite linear;
     }
 
     .works img {
-        width: 100px;
-        margin: 5px;
+        margin: 0 15px;
+        width: 150px;
+        height: auto;
     }
 }
 
