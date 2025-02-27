@@ -16,6 +16,12 @@ body {
     overflow-x: hidden;
 }
 
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
 label,
 input,
 textarea,
@@ -96,10 +102,6 @@ section
 
     .section-headline {
         font-size: 30px;
-        margin: 0 0 20px;
-    }
-
-    .section-button {
         margin: 0 0 20px;
     }
 }
@@ -359,8 +361,8 @@ button
 .button {
     position: relative;
     z-index: 2;
-    width: 195px;
-    height: 45px;
+    width: 192px;
+    height: 42px;
     display: inline-block;
     color: #fff;
     font-weight: bold;
