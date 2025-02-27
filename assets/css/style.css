@@ -50,20 +50,6 @@ grid
     width: 25%;
 }
 
-.grid-col-3{
-    animation: carousel 50s infinite linear;
-}
-
-@keyframes carousel{
-    form{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-}
-
-
 @media screen and (max-width:768px) {
     .grid {
         display: block;
