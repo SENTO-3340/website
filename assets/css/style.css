@@ -153,6 +153,12 @@ header
         font-size: 12px;
     }
 }
+@media (hover: none){
+    .header-navitem>a:active {
+        margin-bottom: 0px;
+        border-bottom: 2px solid #fff;
+    }
+}
 
 /*
 hero
@@ -407,6 +413,11 @@ button
 
 .button-shadow:hover::after {
     opacity: 1;
+}
+@media (hover: none){
+    .button-shadow:active::after {
+        opacity: 1;
+    }
 }
 
 @keyframes rotate {
