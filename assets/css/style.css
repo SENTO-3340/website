@@ -141,6 +141,7 @@ header
     margin-bottom: 2px;
     border-bottom: 0px solid transparent;
     transition: border-color .25s;
+    touch-action: manipulation;
 }
 
 .header-navitem>a:hover {
@@ -391,6 +392,7 @@ button
     position: relative;
     width: min-content;
     margin: 0 auto;
+    touch-action: manipulation;
 }
 
 .button-shadow::after {
